@@ -6,10 +6,10 @@
 ### Files in this folder
 
 - `all_drones_y_vs_time.eps` – Y-position trajectories of all Agent's and Follwer's over time  
-  ![All drones: y vs time](./all_drones_x_vs_time.eps)
+  ![All drones: y vs time](./all_drones_x_vs_time.png)
 
 - `y_consensus_error_vs_time.eps` – Per-Agent absolute error to the **y-consensus** value  
-  ![Consensus error in y](./y_consensus_error_vs_time.eps)
+  ![Consensus error in y](./y_consensus_error_vs_time.png)
 
 ---
 
@@ -28,10 +28,10 @@
 ### Files in this folder
 
 - `all_drones_x_vs_time.eps` – X-position trajectories of all Agent's and Follwer's over time  
-  ![All drones: x vs time](./all_drones_x_vs_time.eps)
+  ![All drones: x vs time](./all_drones_x_vs_time.png)
 
 - `x_consensus_error_vs_time.eps` – Per-Agent absolute error to the **x-consensus** value  
-  ![Consensus error in x](./x_consensus_error_vs_time.eps)
+  ![Consensus error in x](./x_consensus_error_vs_time.png)
 
 ---
 
