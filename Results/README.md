@@ -20,15 +20,15 @@ It also clarifies how **consensus** is computed and how to interpret the figures
 
 ---
 
-## What the plots show
+### What the plots show
 
-### 1) All-drones overlay: `x` vs `time`
+#### 1) All-drones overlay: `x` vs `time`
 - Each curve is a drone’s **x(t)**.
 - Labels use your custom mapping: `A1…A5` are agents; `T1/T2` are **anchors**.
 - Colors/linestyles come from the script’s `STYLE_MAP`.
 - Convergence (lines clustering together) hints at consensus along the x-axis.
 
-### 2) X–consensus error: \(|x_i(t) - \bar{x}|\)
+#### 2) X–consensus error: \(|x_i(t) - \bar{x}|\)
 - For each **non-anchor** agent, we plot the absolute error to the **consensus**:
 
   \[
@@ -43,7 +43,7 @@ It also clarifies how **consensus** is computed and how to interpret the figures
 
 ---
 
-## How to read the plots
+### How to read the plots
 
 - **Good consensus:** overlay shows traces approaching a common x-level; error curves decay to near-zero.
 - **Slow convergence:** shallow error decay or long plateaus.
@@ -53,7 +53,7 @@ It also clarifies how **consensus** is computed and how to interpret the figures
 
 ---
 
-## About the time axis
+### About the time axis
 
 If your error plot appears to “start” around **120 s**, that’s because the CSV’s `t_sec` column already starts near 120 (e.g., logging began mid-run).  
 Two options:
@@ -73,7 +73,7 @@ Then use `t` instead of `t_sec` in plotting.
 
 ---
 
-## Reproducing the plots
+### Reproducing the plots
 
 Assuming your upgraded plotting script (with `CUSTOM_LABELS`, `STYLE_MAP`, and consensus-error support):
 
@@ -85,19 +85,19 @@ python plot_odom.py --dir /path/to/logdir --combined all_odom.csv     --componen
 python plot_odom.py --dir /path/to/logdir --combined all_odom.csv     --error-comp x --tmax 150 --fmt eps
 ```
 
-### Required CSV columns
+#### Required CSV columns
 - `drone` (string name, e.g., `crazyflie1`)
 - `t_sec` (float seconds since some epoch)
 - `x`, `y`, `z` (float, meters)
 
-### Styling & labels
+#### Styling & labels
 - Edit `CUSTOM_LABELS` to map **numeric IDs → labels** (e.g., `1 → A1`, `2 → T1`).
 - Edit `STYLE_MAP` to change line color/linestyle per label.
 - Legends are generated automatically.
 
 ---
 
-## Common pitfalls
+### Common pitfalls
 
 - **Units:** ensure `x`, `y`, `z` are in **meters**.
 - **NaNs:** rows with missing `x/y/z/t_sec/drone` are dropped—check your logs.
@@ -106,7 +106,7 @@ python plot_odom.py --dir /path/to/logdir --combined all_odom.csv     --error-co
 
 ---
 
-### At a glance
+#### At a glance
 
 - **Goal:** show how agents move in x and how fast they agree on a common x.  
 - **Success condition:** error curves → 0 and stay there (within tolerance).  
