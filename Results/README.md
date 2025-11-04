@@ -1,11 +1,14 @@
-# Trajectory & Consensus Error (X–axis)
+# Trajectory & Consensus Error 
+
+
+## Trajectory & Consensus Error (X–axis)
 
 This README explains the two plots you provided and how to regenerate them from logs.  
 It also clarifies how **consensus** is computed and how to interpret the figures.
 
 ---
 
-## Files in this folder
+### Files in this folder
 
 - `all_drones_x_vs_time.eps` – X-position trajectories of all drones over time  
   ![All drones: x vs time](./all_drones_x_vs_time.eps)
